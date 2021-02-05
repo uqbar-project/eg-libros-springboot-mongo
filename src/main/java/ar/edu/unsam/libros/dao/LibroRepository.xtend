@@ -5,7 +5,7 @@ import java.util.Collection
 import org.springframework.data.mongodb.repository.MongoRepository
 import org.springframework.data.mongodb.repository.Query
 
-interface LibroRepository extends MongoRepository<Libro, Long> {
+interface LibroRepository extends MongoRepository<Libro, String> {
 	
 	def Libro findByTitulo(String titulo)
 

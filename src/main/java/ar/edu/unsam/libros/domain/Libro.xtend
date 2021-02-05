@@ -22,7 +22,7 @@ class Libro {
 		estado = DISPONIBLE
 	}
 	
-	def void prestar(Prestamo prestamo) {
+	def void prestar() {
 		estado = PRESTADO
 	}
 	

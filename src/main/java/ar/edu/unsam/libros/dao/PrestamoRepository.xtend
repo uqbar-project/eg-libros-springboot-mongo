@@ -6,7 +6,7 @@ import java.util.Collection
 import org.springframework.data.mongodb.repository.MongoRepository
 import org.springframework.data.mongodb.repository.Query
 
-interface PrestamoRepository extends MongoRepository<Prestamo, Long> {
+interface PrestamoRepository extends MongoRepository<Prestamo, String> {
 	
 	def Libro findByLibro(Libro libro)
 	

@@ -68,17 +68,17 @@ class LibrosBootstrap implements InitializingBean {
 			])
 
 		val elAlephASantos = crearPrestamo(elAleph, santos)
-		elAleph.prestar(elAlephASantos)
+		elAleph.prestar
 		repoLibros.save(elAleph)
 		repoPrestamos.createWhenNew(elAlephASantos)
 		
 		val noHabraAMedina = crearPrestamo(noHabraMasPenas, medina)
-		noHabraMasPenas.prestar(noHabraAMedina)
+		noHabraMasPenas.prestar
 		repoLibros.save(noHabraMasPenas)
 		repoPrestamos.createWhenNew(noHabraAMedina)
 		
 		val novelaASantos = crearPrestamo(novelaPeron, santos)
-		novelaPeron.prestar(novelaASantos)
+		novelaPeron.prestar
 		repoLibros.save(novelaPeron)
 		repoPrestamos.createWhenNew(novelaASantos)
 	}
