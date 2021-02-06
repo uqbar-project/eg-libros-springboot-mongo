@@ -15,11 +15,6 @@ class Prestamo {
 	LocalDate fechaPrestamo = LocalDate.now
 	LocalDate fechaDevolucion
 
-	def devolver() {
-		fechaDevolucion = LocalDate.now
-		libro.devolver
-	}
-	
 	def estaPendiente() {
 		fechaDevolucion === null
 	}
@@ -34,6 +29,20 @@ class Prestamo {
 		if (!libro.estaDisponible) {
 			throw new UserException("El libro no está disponible")
 		}
+	}
+
+	def validarDevolucion() {
+		if (estaDisponible) {
+			throw new UserException("El préstamo del libro ya terminó")
+		}
+		if (libro.estaDisponible) {
+			throw new UserException("El libro ya fue devuelto")
+		}
+	}
+	
+	def devolver() {
+		fechaDevolucion = LocalDate.now
+		libro.devolver
 	}
 	
 	def estaDisponible() {
