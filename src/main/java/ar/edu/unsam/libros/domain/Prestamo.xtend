@@ -1,6 +1,6 @@
 package ar.edu.unsam.libros.domain
 
-import ar.edu.unsam.libros.UserException
+import ar.edu.unsam.libros.errorHandling.UserException
 import java.time.LocalDate
 import org.eclipse.xtend.lib.annotations.Accessors
 import org.springframework.data.annotation.Id
